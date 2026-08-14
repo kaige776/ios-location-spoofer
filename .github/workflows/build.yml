@@ -130,16 +130,16 @@ jobs:
             -scheme location-spoofer \
             -archivePath $RUNNER_TEMP/LocationSpoofer.xcarchive \
             -destination "generic/platform=iOS" \
-            CODE_SIGN_STYLE=Manual \
-            DEVELOPMENT_TEAM=RL3VF87PQT \
             -allowProvisioningUpdates \
-            CODE_SIGN_IDENTITY="Apple Distribution" \
-            APP_PROVISIONING_PROFILE="LocationSpoofer AppStore" \
-            TUNNEL_PROVISIONING_PROFILE="LocationSpoofer Tunnel AppStore" \
             CURRENT_PROJECT_VERSION=$GITHUB_RUN_NUMBER \
+    #       CODE_SIGN_STYLE=Manual \
+    #       DEVELOPMENT_TEAM=RL3VF87PQT \
     #        -authenticationKeyPath $HOME/private_keys/AuthKey_${{ secrets.APP_STORE_CONNECT_KEY_ID }}.p8 \
     #        -authenticationKeyID ${{ secrets.APP_STORE_CONNECT_KEY_ID }} \
     #        -authenticationKeyIssuerID ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }} \
+    #       CODE_SIGN_IDENTITY="Apple Distribution" \
+    #       APP_PROVISIONING_PROFILE="LocationSpoofer AppStore" \
+    #       TUNNEL_PROVISIONING_PROFILE="LocationSpoofer Tunnel AppStore" \
             
 
       - name: Export IPA
